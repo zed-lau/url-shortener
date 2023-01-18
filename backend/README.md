@@ -1,6 +1,9 @@
 ## Description
 Url Shortener Server based on [Nest](https://github.com/nestjs/nest) framework
 
+## Swagger
+![](/backend/swagger.png)
+
 ## Installation
 
 ```bash

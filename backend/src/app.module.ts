@@ -1,10 +1,14 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { KnexModule } from 'nest-knexjs';
+import { knexConfig } from './config/knex.config';
+import { ShortUrlModule } from './modules/short-url.module';
+import { UrlRedirectionModule } from './modules/url-redirection.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ShortUrlModule,
+    UrlRedirectionModule,
+    KnexModule.forRootAsync(knexConfig),
+  ],
 })
 export class AppModule {}
