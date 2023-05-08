@@ -1,10 +1,14 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ShortUrlModule } from './short-url/short-url.module';
+import { UrlRedirectionModule } from './url-redirection/url-redirection.module';
+import { dataSourceOptions } from './db/datasource';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    TypeOrmModule.forRoot(dataSourceOptions),
+    ShortUrlModule,
+    UrlRedirectionModule,
+  ],
 })
 export class AppModule {}

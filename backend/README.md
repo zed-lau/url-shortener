@@ -1,6 +1,9 @@
 ## Description
 Url Shortener Server based on [Nest](https://github.com/nestjs/nest) framework
 
+## Swagger
+![](/backend/swagger.png)
+
 ## Installation
 
 ```bash
@@ -25,9 +28,6 @@ $ yarn run start:prod
 ```bash
 # unit tests
 $ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
 
 # test coverage
 $ yarn run test:cov
