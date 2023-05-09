@@ -42,10 +42,11 @@ export class ShortUrlService {
   }
 
   private getMaxPathLength(urlLength: number) {
-    if (this.host.length > urlLength) {
+    const minShortUrlLength =  this.host.length + 2
+    if (minShortUrlLength > urlLength) {
       return 1;
     }
-    return urlLength - this.host.length - 2;
+    return urlLength - minShortUrlLength;
   }
 
   private generateRandomInteger(min: number, max: number) {
