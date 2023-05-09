@@ -1,0 +1,11 @@
+.copy-url-view__container {
+  background-color: white;
+  width: 50em;
+  border-radius: 1em;
+}
+
+.copy-url-view__content {
+  padding: 1em 2em 3em 2em;
+  display: flex;
+  flex-direction: column;
+}
